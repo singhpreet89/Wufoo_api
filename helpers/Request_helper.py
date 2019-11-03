@@ -13,7 +13,7 @@ class Request:
         self.__form_hash = configuration['form_hash']
         self.__auth_values = (self.__username, self.__password)
         
-    def __post_entry(self, row):
+    def __post(self, row):
         
         # Getting the field id's to be sent in the payload
         # response = requests.get(self.__base_url + '/forms/' + self.__form_hash +'/fields.json', params={'q':'system=true'}, auth = self.__auth_values)
@@ -21,9 +21,10 @@ class Request:
         # print("\n----------\n") 
         
         result = requests.post(self.__base_url + '/forms/' + self.__form_hash +'/entries.json', data = row, auth = self.__auth_values)
-        print(result.status_code) 
+        # print(result.status_code) 
+        # self.__response_obj.get_response(result)
+        return result
         
-        self.__response_obj.get_response(result)
-        
-    def get_post_entry(self, row):
-        self.__post_entry(row)
+    def post_entry(self, row):
+        return self.__post(row)
+        # self.__post(row)
