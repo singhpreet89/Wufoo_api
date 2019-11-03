@@ -17,14 +17,16 @@ class Request_controller:
         # print(self.parsed_rows)
         request = Request()
         
+        count = 0
         for row in self.parsed_rows:
             # print(row)
             self.result = request.post_entry(row)
-            self.handle_response()
+            self.handle_response(count + 1)
+            count += 1
     
-    def handle_response(self):
+    def handle_response(self, counter):
         response = Response()
-        res = response.get_response(self.result)
+        res = response.get_response(self.result, counter)
         print(res)
         
     def start(self):
