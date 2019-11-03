@@ -3,7 +3,6 @@ from helpers.Request_helper import Request
 from helpers.Response_helper import Response
 
 class Request_controller:
-        
     def __init__(self):
         self.parsed_rows = None
         self.result = None
@@ -26,12 +25,12 @@ class Request_controller:
     
     def handle_response(self, counter):
         response = Response()
-        res = response.get_response(self.result, counter)
-        print(res)
+        final_res = response.get_response(self.result, counter)
+        print(final_res)
         
-    def start(self):
+    def boot(self):
         self.get_parsed_file()
         self.send_request()
 
 obj = Request_controller()
-obj.start()
+obj.boot()

@@ -5,7 +5,7 @@ from config.config import configuration
 class Parse_CSV:
          
     def __init__(self):
-        self.__file_name = configuration['file_name']
+        self.__file_name = configuration['FILE_NAME']
         
     def __parse(self):
         with open(self.__file_name) as csv_file:

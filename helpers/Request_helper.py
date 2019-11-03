@@ -7,10 +7,10 @@ class Request:
     def __init__(self):
         self.__response_obj = Response()
          
-        self.__base_url = configuration['base_url']
-        self.__username = configuration['username']
-        self.__password = configuration['password']
-        self.__form_hash = configuration['form_hash']
+        self.__base_url = configuration['BASE_URL']
+        self.__username = configuration['USERNAME']
+        self.__password = configuration['PASSWORD']
+        self.__form_hash = configuration['FORM_HASH']
         self.__auth_values = (self.__username, self.__password)
         
     def __post(self, row):
