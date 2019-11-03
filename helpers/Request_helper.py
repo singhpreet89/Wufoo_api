@@ -22,9 +22,7 @@ class Request:
         
         result = requests.post(self.__base_url + '/forms/' + self.__form_hash +'/entries.json', data = row, auth = self.__auth_values)
         # print(result.status_code) 
-        # self.__response_obj.get_response(result)
         return result
         
     def post_entry(self, row):
         return self.__post(row)
-        # self.__post(row)

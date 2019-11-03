@@ -14,7 +14,6 @@ class Parse_CSV:
             for row in csv_dictionary:
                 # print(row)
                 parsed_rows_list = parsed_rows_list + [row]
-                # self.__request_obj.get_post_entry(row)
         return parsed_rows_list 
     
     def get_parsed_rows(self):
