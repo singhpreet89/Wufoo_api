@@ -1,6 +1,5 @@
 import requests
 
-from helpers.Response_helper import Response
 from config.config import configuration
 
 class Request:

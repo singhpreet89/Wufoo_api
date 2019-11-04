@@ -32,5 +32,6 @@ class Request_controller:
         self.get_parsed_file()
         self.send_request()
 
-obj = Request_controller()
-obj.boot()
+if __name__ == '__main__': 
+    obj = Request_controller()
+    obj.boot()
