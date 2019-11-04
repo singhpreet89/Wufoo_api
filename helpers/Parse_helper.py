@@ -7,7 +7,7 @@ class Parse_CSV:
     def __init__(self):
         self.__file_name = configuration['FILE_NAME']
         
-    def __parse(self):
+    def get_parsed_rows(self):
         with open(self.__file_name) as csv_file:
             csv_dictionary = csv.DictReader(csv_file, delimiter=',')
             parsed_rows_list =[]
@@ -15,6 +15,3 @@ class Parse_CSV:
                 # print(row)
                 parsed_rows_list = parsed_rows_list + [row]
         return parsed_rows_list 
-    
-    def get_parsed_rows(self):
-       return self.__parse()

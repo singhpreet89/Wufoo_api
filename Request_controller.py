@@ -19,13 +19,13 @@ class Request_controller:
         count = 0
         for row in self.parsed_rows:
             # print(row)
-            self.result = request.post_entry(row)
+            self.result = request.post(row)
             self.handle_response(count + 1)
             count += 1
     
     def handle_response(self, counter):
         response = Response()
-        final_res = response.get_response(self.result, counter)
+        final_res = response.handle_response(self.result, counter)
         print(final_res)
         
     def boot(self):
