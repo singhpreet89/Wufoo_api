@@ -1,6 +1,20 @@
 # WUFOO API (POST)
-
-This project is written in Python and leverages the Wufoo API's POST method to add the entries in an existing Form.
+<p align="center">
+	<a href="https://forthebadge.com" alt="MADE WITH: PYTHON">
+		<img src="https://forthebadge.com/images/badges/made-with-python.svg" />
+	</a>
+</p>
+<p align="center">
+	<a href="https://badgen.net" alt="Powered by: Python 3.8.2">
+		<img src="https://badgen.net/badge/Powered%20by/Python%203.8.2/3570A0" />
+	</a>
+	<a href="https://opensource.org/licenses/MIT" alt="License: MIT">
+		<img src="https://img.shields.io/badge/License-MIT-green.svg" />
+	</a>
+</p>
+<p align="center">
+  <strong>This project is written in Python and leverages the Wufoo API's POST method to add the entries in an existing Form.</strong>
+</p>
 
 ## Usage
 
